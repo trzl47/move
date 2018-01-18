@@ -1,15 +1,15 @@
 version: '3'
 services:
   web:
-    image: trzl/portfolio:MOVE-web_v0.0.1
-    container_name: CHANGE-web
+    image: trzl/portfolio:move-web_v0.0.1
+    container_name: MOVE-web
     restart: unless-stopped
     expose:
       - "80"
       - "443"
     environment:
-      VIRTUAL_HOST: MOVE.tbrownkcdev.com
-      LETSENCRYPT_HOST: MOVE.tbrownkcdev.com
+      VIRTUAL_HOST: move.tbrownkcdev.com
+      LETSENCRYPT_HOST: move.tbrownkcdev.com
       LETSENCRYPT_EMAIL: brownty47@gmail.com
 networks:
   default:
