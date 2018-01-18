@@ -1,5 +1,5 @@
 // Components
-import MOVE from '../app/MOVE.js';
+import Home from '../app/Home.js';
 import Gear from '../app/Gear.js';
 import NotFound from '../app/NotFound';
 
@@ -7,7 +7,7 @@ export default {
 	routes: [
 		{
 			path: '/',
-			component: MOVE,
+			component: Home,
 			exact: true
 		},
 		{

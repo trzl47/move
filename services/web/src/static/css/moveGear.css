@@ -69,7 +69,7 @@
 
 /* Main */
 .main {
-  background: url('./assets/move-gear-bg.jpg') no-repeat center center; 
+  background: url('../img/move-gear-bg.jpg') no-repeat center center;
   background-size: cover;
   height: 600px;
 }
@@ -130,7 +130,7 @@
 }
 
 .feature {
-  background: url('./assets/01.jpg') no-repeat center center;
+  background: url('../img/01.jpg') no-repeat center center;
   background-size: cover;
   height: 400px;
   width: 100%;

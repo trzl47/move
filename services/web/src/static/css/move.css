@@ -13,15 +13,10 @@
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-.container {
-	/*max-width: 940px;*/
-	/*margin: 0 auto;*/
-}
-
 /* Main */
 .main {
 	text-align: center;
-	background: url('./assets/move-bg.jpg') no-repeat center center;
+	background: url('../img/move-bg.jpg') no-repeat center center;
 	background-size: cover;
    	height: 600px;
 }
@@ -90,7 +85,7 @@
 
 /* Feature */
 .feature {
-	background: url('./assets/feature.jpg') no-repeat center center;
+	background: url('../img/feature.jpg') no-repeat center center;
 	background-size: cover;
 	height: 600px;
 	text-align: center;
@@ -111,7 +106,7 @@
 
 /* Footer */
 .footer {
-	background: url('./assets/footer.jpg') no-repeat center center;
+	background: url('../img/footer.jpg') no-repeat center center;
 	background-size: cover;
 	height: 600px;
 	text-align: center;
