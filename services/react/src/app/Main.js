@@ -12,16 +12,8 @@ class Main extends Component {
 		return (
 			<div>
 				<Switch>
-					<Route exact path='/' render={({path}) =>
-						<div>
-							<Home />
-						</div>
-					} />
-					<Route exact path='/Gear' render={({path}) =>
-						<div>
-							<Gear />
-						</div>
-					} />
+					<Route exact={true} pattern="/" component={Home} />
+					<Route exact={true} pattern="/Gear" component={Gear} />
 					<Route path='*' component={NotFound} />
 				</Switch>
 			</div>
