@@ -33,7 +33,10 @@ class CitySearch extends Component {
 			// create regexp for entered city
 			// TODO: amend search to account for defualt
 			// TODO: amend search to account for empty search field
-			const searchName = new RegExp(this.state.city.toUpperCase(), 'g');
+
+			const searchName = this.state.city === '' ?
+					'zzzz' : new RegExp(this.state.city.toUpperCase(), 'g');
+
 			return city.toUpperCase().match(searchName);
 		});
 
@@ -46,6 +49,7 @@ class CitySearch extends Component {
 							name='city'
 							className='field city'
 							value={this.state.city}
+							onFocus={e => e.target.select()}
 							onChange={this.handleChange}>
 						</input>
 					</div>
