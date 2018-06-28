@@ -31,11 +31,10 @@ class CitySearch extends Component {
 	render() {
 		const matches = cities.filter((city) => {
 			// create regexp for entered city
-			// TODO: amend search to disregard case
 			// TODO: amend search to account for defualt
 			// TODO: amend search to account for empty search field
-			const searchName = new RegExp(this.state.city, 'g');
-			return city.match(searchName);
+			const searchName = new RegExp(this.state.city.toUpperCase(), 'g');
+			return city.toUpperCase().match(searchName);
 		});
 
 		return(

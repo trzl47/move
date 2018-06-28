@@ -11,17 +11,12 @@ import Footer from './components/Footer.js';
 import '../static/css/reset.css';
 import '../static/css/move.css';
 
-// var main = function() {
-// 	$( "#search" ).autocomplete({source: cities });
-// };
-//
-// $(document).ready(main);
 class Home extends Component {
 	render() {
 		return(
 			<div className='move'>
 				<Banner />
-				{/* <Supporting /> */}
+				<Supporting />
 				{/* <Feature /> */}
 				{/* <Premium /> */}
 				{/* <Footer /> */}
