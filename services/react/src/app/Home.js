@@ -10,8 +10,6 @@ import Footer from './components/Footer.js';
 // styles
 import '../static/css/reset.css';
 import '../static/css/move.css';
-// data
-import cities from '../data/cities.js';
 
 // var main = function() {
 // 	$( "#search" ).autocomplete({source: cities });
