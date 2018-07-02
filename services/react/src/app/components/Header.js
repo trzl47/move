@@ -6,9 +6,10 @@ import { withRouter } from 'react-router-dom';
 import '../../static/css/header.css';
 
 const Header = props => {
+	const pathname = props.location.pathname === '/' ? '' : props.location.pathname.substr(1,props.location.pathname.length);
 	return(
 		<div className='header'>
-			<h1>Move <span>{props.location.pathname}</span></h1>
+			<h1>Move <span>{pathname}</span></h1>
 			<div className="pull-right">
 				<div className='login'>
 					<p>Login</p>
