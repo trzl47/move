@@ -1,7 +1,13 @@
 .citysearch {
 	font-size: 18px;
 	padding: 10px;
-	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.citysearch input {
+	color: #7B8585;
 }

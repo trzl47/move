@@ -21,12 +21,33 @@ const browserConfig = {
 				exclude: /node_modules/,
 				use: 'babel-loader',
 			},
+			// {
+			//   test: /\.(png|jpg|gif)$/,
+			//   use: [
+			//     {
+			// 			loader: 'url-loader',
+			//       options: {
+			// 				limit: 8192,
+			// 				fallback: 'file-loader'
+			//       }
+			//     }
+			//   ]
+			// },
 			{
 				test: /\.(ttf|woff|woff2|eot|svg|ico|png|jpg)?$/,
-				use: ['file-loader'],
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: devMode ? '[path][name].[ext]' : '[name].[hash].[ext]',
+							// name: '[path][name].[ext]',
+							// useRelativePath: true
+						}
+					}
+				]
 			},
 			{
-				test: /\.s?[ac]ss$/,
+				test: /\.(sa|sc|c)ss$/,
 				use: [
 					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
 					'css-loader',
@@ -67,6 +88,7 @@ const browserConfig = {
 
 		new MiniCssExtractPlugin({
 			filename: devMode ? '[name].css' : '[name].[hash].css',
+			chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
 		}),
 	],
 };

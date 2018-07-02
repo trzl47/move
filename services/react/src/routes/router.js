@@ -1,18 +1,18 @@
 // Components
-import Main from '../app/Main.js';
-import Gear from '../app/Gear.js';
+import GearPage from '../app/GearPage.js';
+import HomePage from '../app/HomePage';
 import NotFound from '../app/NotFound';
 
 export default {
 	routes: [
 		{
 			path: '/',
-			component: Main,
+			component: HomePage,
 			exact: true
 		},
 		{
 			path: '/Gear',
-			component: Gear,
+			component: GearPage,
 			exact: true
 		},
 		{

@@ -1,5 +1,5 @@
-/* Supporting */
-.supporting {
+/* SupportBlock */
+.supportblock {
 	background-color: #1c1c1c;
 	display: flex;
 	flex-direction: column;
@@ -8,12 +8,12 @@
 	text-align: center;
 	padding: 2rem;
 }
-.supporting h2 {
+.supportblock h2 {
 	color: #ffa800;
 	font-size: 40px;
 	padding: 10px;
 }
-.supporting p {
+.supportblock p {
 	color: #efefef;
 	line-height: 20px;
 }

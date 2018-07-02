@@ -1,30 +1,25 @@
 //Libs
-import React, { Component } from 'react';
+import React from 'react';
+// components
+import SupportBlock from './SupportBlock.js';
 // styles
 import '../../static/css/supporting.css';
 
-class Supporting extends Component {
-	render() {
-		return(
-			<div className='supporting'>
-				<div className='container'>
-					<div className='col'>
-						<h2>Move</h2>
-						<p>Become more active by tracking your runs, rides, and walks.</p>
-					</div>
-					<div className='col'>
-						<h2>Sync</h2>
-						<p>Access your activity on your phone, tablet, or computer.</p>
-					</div>
-					<div className='col'>
-						<h2>Compete</h2>
-						<p>Set personal challenges and see how you ranks against your friends.</p>
-					</div>
-					<div className='clearfix'></div>
-				</div>
-			</div>
+const Supporting = props => {
+	const supportblocks = props.blocks.map((block) => {
+		return (
+			<SupportBlock
+			key={props.blocks.indexOf(block)}
+			header={block.header}
+			content={block.content} />
 		);
-	}
-}
+	});
+
+	return(
+		<div className='supporting'>
+			{ supportblocks }
+		</div>
+	);
+};
 
 export default Supporting;

@@ -1,37 +1,24 @@
-/* Main */
+/* Banner */
 .banner {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background: url('../img/move-bg.jpg');
-	/* background: url('../img/move-bg.jpg') no-repeat center center; */
 	background-size: cover;
 	height: 60vh;
 	text-align: center;
 }
-
 .banner h1 {
 	color: #fff; margin: 0;
 	font-size: 200px;
+}
+.banner p {
+	color: #fff;
+	font-size: 18px;
 }
 @media (max-width: 700px) {
 	.banner h1 {
 		font-size: 110px;
 	}
-}
-
-.banner p {
-	color: #fff;
-	/* margin: 0 0 20px 0; */
-	font-size: 18px;
-}
-
-.banner .btn {
-	background-color: #1c1c1c;
-	color: #fff;
-	font-size: 18px;
-	/* padding: 8px 30px; */
-	/* text-decoration: none; */
-	/* display: inline-block; */
 }

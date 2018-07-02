@@ -1,0 +1,28 @@
+.ui-accordion-header {
+  background-color: #1c1c1c;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+}
+.ui-accordion-header:hover {
+	color: #ffa800;
+}
+
+.ui-accordion-content {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+.ui-accordion-content .accordion-option {
+  color: #1c1c1c;
+	padding: 0px 20px;
+	text-decoration: none;
+}
+
+.ui-accordion-content .accordion-option:hover {
+	background-color: #ffa800;
+}

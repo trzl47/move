@@ -31,9 +31,6 @@ class CitySearch extends Component {
 	render() {
 		const matches = cities.filter((city) => {
 			// create regexp for entered city
-			// TODO: amend search to account for defualt
-			// TODO: amend search to account for empty search field
-
 			const searchName = this.state.city === '' ?
 					'zzzz' : new RegExp(this.state.city.toUpperCase(), 'g');
 
@@ -54,7 +51,11 @@ class CitySearch extends Component {
 						</input>
 					</div>
 				</form>
-				<SearchResults matches={matches} />
+				<div>
+					<ul>
+						<SearchResults matches={matches} />
+					</ul>
+				</div>
 			</React.Fragment>
 		);
 	}

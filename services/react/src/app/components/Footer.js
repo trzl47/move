@@ -1,20 +1,20 @@
 //Libs
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 // styles
 import '../../static/css/footer.css';
 
-class Premium extends Component {
-	render() {
-		return(
-			<div className='footer'>
-			<div className='container'>
-				<h2>Stop scrolling. Start moving</h2>
-				<Link className='btn' to="/Gear">Start Now</Link>
+const Footer = () => {
+	return(
+		<div className='footer'>
+			<div className='actions'>
+				<a href='/#'>Gift Cards</a>
+				<a href='/#'>Find a city</a>
+				<a href='/#'>Become a member</a>
+				<a href='/#'>Contact us</a>
 			</div>
+			<h1>MOVE</h1>
 		</div>
-		);
-	}
-}
+	);
+};
 
-export default Premium;
+export default Footer;
