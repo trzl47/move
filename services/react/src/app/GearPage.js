@@ -8,7 +8,7 @@ import AccordionMenu from './components/AccordionMenu/AccordionMenu';
 import '../static/css/moveGear.css';
 // data
 import { GearSupport } from '../data/supportblocks.js';
-import { GearHero } from '../data/herobanners.js';
+import { GearHero, GearHero2 } from '../data/herobanners.js';
 import { GearMenu } from '../data/submenus.js';
 
 const GearPage = () => {
@@ -17,7 +17,7 @@ const GearPage = () => {
 			<AccordionMenu menu={GearMenu} />
 			<Hero content={GearHero} />
 			<Supporting blocks={GearSupport} />
-			{/* <div className='feature'></div> */}
+			<Hero content={GearHero2} />
 		</div>
 	);
 };

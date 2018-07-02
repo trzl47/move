@@ -18,8 +18,17 @@ const GearHero = [
 		'backgroundImage': '/src/static/img/move-gear-bg.jpg'
 	},
 ];
+
+const GearHero2 = [
+	{
+		'header': '',
+		'backgroundImage': '/src/static/img/01.jpg'
+	},
+];
+
 module.exports = {
 	HomeHero,
 	HomeHero2,
 	GearHero,
+	GearHero2,
 };
