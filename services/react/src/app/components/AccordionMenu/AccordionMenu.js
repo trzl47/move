@@ -7,12 +7,12 @@ import '../../../static/css/accordionmenu.css';
 
 const AccordionMenu = props => {
 	const submenus = props.menu.map((submenu) => {
-			return (
-				<AccordionSubmenu
-				key={props.menu.indexOf(submenu)}
-				submenu={submenu} />
-			);
-		});
+		return (
+			<AccordionSubmenu
+			key={props.menu.indexOf(submenu)}
+			submenu={submenu} />
+		);
+	});
 
 	return(
 		<div className='accordion-menu'>

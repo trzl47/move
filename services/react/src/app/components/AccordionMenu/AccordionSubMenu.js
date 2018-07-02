@@ -9,6 +9,7 @@ class AccordionSubmenu extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			toggle: false
 		};
 
 		this.handleClick = this.toggleSubmenu.bind(this);
@@ -16,18 +17,7 @@ class AccordionSubmenu extends Component {
 
 	toggleSubmenu(event) {
 		event.preventDefault();
-		let classes = [...event.target.classList];
-		console.log(classes);
-		if (classes.includes('open')) {
-			event.target.classList.add('closed');
-			event.target.classList.remove('open');
-		}
-		else if (classes.includes('closed')) {
-			event.target.classList.add('open');
-			event.target.classList.remove('closed');
-		}
-
-		console.log(classes);
+		this.setState({ toggle: !this.state.toggle });
 	}
 
 	render () {
@@ -38,11 +28,10 @@ class AccordionSubmenu extends Component {
 				option={option} />
 			);
 		});
-
 		return(
 			<div className='accordion-submenu'>
-				<h3 className='ui-accordion-header closed' onClick={(e) => this.toggleSubmenu(e)}> { this.props.submenu.header } </h3>
-				<div className='ui-accordion-content'>
+				<h3 className='ui-accordion-header' onClick={(e) => this.toggleSubmenu(e)}> { this.props.submenu.header } </h3>
+				<div className={`ui-accordion-content ${this.state.toggle}`}>
 					{ menuoptions }
 				</div>
 			</div>

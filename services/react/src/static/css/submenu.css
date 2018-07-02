@@ -17,6 +17,12 @@
 	display: flex;
 	flex-direction: column;
 }
+.ui-accordion-content.false * {
+	display: none;
+}
+.ui-accordion-content.true * {
+	display: block;
+}
 .ui-accordion-content .accordion-option {
   color: #1c1c1c;
 	padding: 0px 20px;
