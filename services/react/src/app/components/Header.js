@@ -1,30 +1,49 @@
 //Libs
-import React from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 // components
+import Login from './Login.js';
 // styles
 import '../../static/css/header.css';
 
-const Header = props => {
-	const pathname = props.location.pathname === '/' ? '' : props.location.pathname.substr(1,props.location.pathname.length);
-	return(
-		<div className='header'>
-			<h1>Move <span>{pathname}</span></h1>
-			<div className="pull-right">
-				<div className='login'>
-					<p>Login</p>
-					<div className='dropdown-menu' style={{display: 'none'}}>
-						<h3>Log in to MOVE</h3>
-						<form>
-							<div className="form-group"> <input type="email" className="form-control" id="email" placeholder="Email" /> </div>
-							<div className="form-group"> <input type="password" className="form-control" id="password" placeholder="Password" /> </div>
-							<button type="submit" className="btn">Sign in</button>
-						</form>
+class Header extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			toggle: false
+		};
+
+		this.handleClick = this.toggleLogin.bind(this);
+	}
+
+	toggleLogin(event) {
+		event.preventDefault();
+		this.setState({ toggle: !this.state.toggle });
+	}
+
+
+	render () {
+		const pathname = () => {
+			return (
+				this.props.location.pathname === '/' ?
+					'' : this.props.location.pathname.substr(1,this.props.location.pathname.length)
+			);
+		};
+
+		return (
+			<div className='header'>
+				<h1 className='logo'>Move <span>{pathname()}</span></h1>
+				<div className="pull-right">
+					<div className='login'>
+						<p onClick={(e) => this.toggleLogin(e)}>Login</p>
+						<div className={`login-menu ${this.state.toggle}`}>
+							<Login />
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	);
-};
+		);
+	}
+}
 
 export default withRouter(Header);
