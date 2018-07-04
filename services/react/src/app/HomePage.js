@@ -5,26 +5,21 @@ import { Link } from 'react-router-dom';
 import Banner from './components/Banner.js';
 import Supporting from './components/Supporting.js';
 import Hero from './components/Hero.js';
+import ActionHero from './components/ActionHero.js';
 // styles
 import '../static/css/move.css';
 // data
 import { HomeSupport, HomeSupport2 } from '../data/supportblocks.js';
-import { HomeHero, HomeHero2 } from '../data/herobanners.js';
+import { HomeAction, HomeAction2 } from '../data/actionheros.js';
 
 const Homepage = () => {
 	return(
 		<div className='move'>
 			<Banner />
 			<Supporting blocks={HomeSupport} />
-			<Hero content={HomeHero} />
-			<div className='premium'>
-				<Supporting blocks={HomeSupport2} />
-				<Link className='btn' to="/Gear">Learn More</Link>
-			</div>
-			<span className='feature'>
-				<Hero content={HomeHero2} />
-				<Link className='btn' to="/Gear">Start Now</Link>
-			</span>
+			<ActionHero content={HomeAction} />
+			<Supporting blocks={HomeSupport2} />
+			<ActionHero content={HomeAction2} />
 		</div>
 	);
 };

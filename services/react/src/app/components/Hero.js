@@ -1,17 +1,14 @@
 //Libs
 import React from 'react';
+// helpers
+import backgrounds from '../helpers/backgroundImages.js';
 // styles
 import '../../static/css/hero.css';
 
-// getting all Heor background images
-function importAll(r) {
-  return r.keys().map(r);
-}
-const images = importAll(require.context('../../static/img/', false, /\.(png|jpg|svg)$/));
 
 const Hero = props => {
 	// find correct url to match with
-	const urlmatch = images.filter((url) => {
+	const urlmatch = backgrounds.filter((url) => {
 		return url === props.content[0].backgroundImage;
 	});
 

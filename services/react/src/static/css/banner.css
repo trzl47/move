@@ -10,15 +10,18 @@
 	text-align: center;
 }
 .banner h1 {
-	color: #fff; margin: 0;
-	font-size: 200px;
+	color: #fff;
+	font-size: 5rem;
 }
 .banner p {
 	color: #fff;
-	font-size: 18px;
+	font-size: 1rem;
 }
-@media (max-width: 700px) {
+@media only screen and (min-width: 768px) {
 	.banner h1 {
-		font-size: 110px;
+		font-size: 10rem;
+	}
+	.banner p {
+		font-size: 2rem;
 	}
 }
