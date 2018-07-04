@@ -16,7 +16,6 @@ class AccordionSubmenu extends Component {
 	}
 
 	toggleSubmenu(event) {
-		event.preventDefault();
 		this.setState({ toggle: !this.state.toggle });
 	}
 
@@ -28,9 +27,18 @@ class AccordionSubmenu extends Component {
 				option={option} />
 			);
 		});
+
 		return(
 			<div className='accordion-submenu'>
-				<h3 className='ui-accordion-header' onClick={(e) => this.toggleSubmenu(e)}> { this.props.submenu.header } </h3>
+				<label className='label submenu-toggle ui-accordion-header'> { this.props.submenu.header }
+					<input
+						name="submenu-toggle"
+						className='input submenu-toggle '
+						type="checkbox"
+						checked={this.state.toggle}
+						onChange={(e) => this.toggleSubmenu(e)}>
+					</input>
+				</label>
 				<div className={`ui-accordion-content ${this.state.toggle}`}>
 					{ menuoptions }
 				</div>

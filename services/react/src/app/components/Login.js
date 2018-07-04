@@ -24,36 +24,33 @@ class Login extends Component {
 	}
 
 	handleSubmit(event) {
-		alert('Login form submitted!');
 		console.log('Login form submitted');
 		event.preventDefault();
 	}
 
 	render() {
 		return(
-			<React.Fragment>
-				<form action='' onSubmit={this.handleSubmit} className='login-form'>
-					<div className='login'>
-						<input
-							type='text'
-							name='email'
-							className='loginfield email'
-							value={this.state.email}
-							onFocus={e => e.target.select()}
-							onChange={this.handleChange}>
-						</input>
-						<input
-							type='text'
-							name='password'
-							className='loginfield password'
-							value={this.state.password}
-							onFocus={e => e.target.select()}
-							onChange={this.handleChange}>
-						</input>
-						<input type="submit" value="Sign In" />
-					</div>
-				</form>
-			</React.Fragment>
+			<form action='' onSubmit={this.handleSubmit} className='login-form'>
+				<div className='login'>
+					<input
+						type='text'
+						name='email'
+						className='loginfield email'
+						value={this.state.email}
+						onFocus={e => e.target.select()}
+						onChange={this.handleChange}>
+					</input>
+					<input
+						type='text'
+						name='password'
+						className='loginfield password'
+						value={this.state.password}
+						onFocus={e => e.target.select()}
+						onChange={this.handleChange}>
+					</input>
+					<input type="submit" value="Sign In" />
+				</div>
+			</form>
 		);
 	}
 }

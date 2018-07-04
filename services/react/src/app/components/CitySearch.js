@@ -25,7 +25,6 @@ class CitySearch extends Component {
 
 	handleSubmit(event) {
 		alert('Contact Form Submitted!');
-		event.preventDefault();
 	}
 
 	render() {

@@ -17,10 +17,8 @@ class Header extends Component {
 	}
 
 	toggleLogin(event) {
-		event.preventDefault();
 		this.setState({ toggle: !this.state.toggle });
 	}
-
 
 	render () {
 		const pathname = () => {
@@ -32,10 +30,18 @@ class Header extends Component {
 
 		return (
 			<div className='header'>
-				<h1 className='logo'>Move <span>{pathname()}</span></h1>
+				<h1 className='logo'>Move <span className='page'>{pathname()}</span></h1>
 				<div className="pull-right">
 					<div className='login'>
-						<p onClick={(e) => this.toggleLogin(e)}>Login</p>
+						<label className='label login-toggle'>Login
+							<input
+								name="login-toggle"
+								className='input login-toggle'
+								type="checkbox"
+								checked={this.state.toggle}
+								onChange={(e) => this.toggleLogin(e)}>
+							</input>
+						</label>
 						<div className={`login-menu ${this.state.toggle}`}>
 							<Login />
 						</div>
