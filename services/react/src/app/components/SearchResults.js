@@ -6,13 +6,13 @@ import '../../static/css/searchresults.css';
 const SearchResults = props => {
 	const cities = props.matches.map((match) => {
 		return (
-			<li role="status"
+			<button role="status"
 				aria-live="assertive"
 				aria-relevant="additions"
 				className={`cityresult ${props.matches.indexOf(match)}`}
 				key={props.matches.indexOf(match)}>
 				{ match }
-			</li>
+			</button>
 		);
 	});
 

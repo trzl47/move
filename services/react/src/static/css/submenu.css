@@ -11,7 +11,9 @@
 	/* padding: 8px 20px; */
 	text-transform: uppercase;
 }
-.ui-accordion-header:hover {
+.ui-accordion-header:hover, .submenu-toggle:hover,
+.ui-accordion-header:active, .submenu-toggle:active,
+.ui-accordion-header:focus, .submenu-toggle:focus {
 	color: #ffa800;
 }
 
@@ -35,8 +37,4 @@ input[type=checkbox].submenu-toggle {
   color: #1c1c1c;
 	padding: 0px 20px;
 	text-decoration: none;
-}
-
-.ui-accordion-content .accordion-option:hover {
-	background-color: #ffa800;
 }

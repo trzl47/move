@@ -49,12 +49,13 @@ class CitySearch extends Component {
 							onChange={this.handleChange}>
 						</input>
 					</div>
-				</form>
-				<div>
-					<ul>
+					<div className='results-block'
+					style={
+						matches.length > 0 ? {'padding' : '10px'} : {'padding' : '0'}
+					}>
 						<SearchResults matches={matches} />
-					</ul>
-				</div>
+					</div>
+				</form>
 			</React.Fragment>
 		);
 	}

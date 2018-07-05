@@ -1,3 +1,6 @@
 .accordion-option {
 	background-color: #eee;
 }
+.ui-accordion-content .accordion-option:hover {
+	background-color: #ffa800;
+}
