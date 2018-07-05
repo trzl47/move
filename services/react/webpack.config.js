@@ -39,8 +39,8 @@ const browserConfig = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: devMode ? '[path][name].[ext]' : '[name].[hash].[ext]',
-							// name: '[path][name].[ext]',
+							// name: devMode ? '[path][name].[ext]' : '[name][hash].[ext]',
+							name: '[path][name].[ext]',
 							// useRelativePath: true
 						}
 					}
