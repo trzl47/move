@@ -1,0 +1,21 @@
+.citysearch-form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.citysearch {
+	font-size: 18px;
+	padding: 10px;
+	text-transform: uppercase;
+	width: 300px;
+}
+.citysearch input {
+	color: #7B8585;
+}
+.results-block {
+	position: absolute;
+	left: 300px;
+	background-color: #1c1c1c;
+}

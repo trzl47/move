@@ -1,0 +1,40 @@
+.accordion-submenu {
+	height: fit-content;
+	width: fit-content;
+}
+.ui-accordion-header {
+  background-color: #1c1c1c;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+	/* padding: 8px 20px; */
+	text-transform: uppercase;
+}
+.ui-accordion-header:hover, .submenu-toggle:hover,
+.ui-accordion-header:active, .submenu-toggle:active,
+.ui-accordion-header:focus, .submenu-toggle:focus {
+	color: #ffa800;
+}
+
+input[type=checkbox].submenu-toggle {
+	opacity: 0;
+}
+
+.ui-accordion-content {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+.ui-accordion-content.false * {
+	display: none;
+}
+.ui-accordion-content.true * {
+	display: block;
+}
+.ui-accordion-content .accordion-option {
+  color: #1c1c1c;
+	padding: 0px 20px;
+	text-decoration: none;
+}

@@ -1,0 +1,25 @@
+/* Footer */
+.footer {
+  background-color: #1c1c1c;
+	font-family: 'Oswald', sans-serif;
+  padding: 1rem;
+}
+.footer .actions {
+	font-size: 1rem;
+}
+.footer-action {
+	text-decoration: none;
+	color: #fff;
+}
+.footer-action:hover {
+  color: #ffa800;
+}
+.footer-header {
+  color: #ffa800;
+  font-size: 1rem;
+	text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+	.footer {
+	}
+}

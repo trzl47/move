@@ -1,0 +1,16 @@
+.cityresult {
+	display: block;
+	padding: 3px 3px;
+	background-color: #F8F8F8;
+	color: #1c1c1c;
+	/* padding: 10px; */
+	margin-bottom: 3px;
+	width: 100%;
+	position: relative;
+	transition: 0.3s;
+}
+.cityresult:focus,
+.cityresult:hover {
+	background-color: #df9300;
+	cursor: pointer;
+}

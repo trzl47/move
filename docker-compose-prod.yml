@@ -1,0 +1,23 @@
+version: '3'
+services:
+  move-nginx:
+    image: trzl/portfolio:move-react.1
+    container_name: move-nginx
+    restart: unless-stopped
+  reverseproxy:
+    image: trzl/portfolio:move-proxy.1
+    container_name: move-proxy
+    restart: unless-stopped
+    expose:
+      - "80"
+      - "443"
+    depends_on:
+      - move-nginx
+    environment:
+      VIRTUAL_HOST: move.tbrownkcdev.com
+      LETSENCRYPT_HOST: move.tbrownkcdev.com
+      LETSENCRYPT_EMAIL: brownty47@gmail.com
+networks:
+  default:
+    external:
+      name: webproxy

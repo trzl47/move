@@ -1,0 +1,12 @@
+.accordion-menu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	background-color: #1c1c1c;
+	border: 1px solid #eee;
+}
+@media only screen and (min-width: 768px) {
+	.accordion-menu {
+		z-index: 1;
+	}
+}

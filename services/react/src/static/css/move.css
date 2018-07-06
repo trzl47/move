@@ -1,0 +1,12 @@
+.move {
+	font-family: 'Oswald', sans-serif;
+	background-color: #1c1c1c;
+}
+.move div > h1,
+.move div > h2,
+ .move div > a {
+	text-transform: uppercase;
+}
+.move ~ p {
+	font-family: Helvetica, Arial, sans-serif;
+}

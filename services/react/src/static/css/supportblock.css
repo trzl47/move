@@ -1,0 +1,19 @@
+/* SupportBlock */
+.supportblock {
+	background-color: #1c1c1c;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem;
+}
+.supportblock h2 {
+	color: #ffa800;
+	font-size: 40px;
+	padding: 10px;
+}
+.supportblock p {
+	color: #efefef;
+	line-height: 20px;
+}

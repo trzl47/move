@@ -1,0 +1,45 @@
+/* Header */
+.header {
+  background-color: #1c1c1c;
+	font-family: 'Oswald', sans-serif;
+	display: grid;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	grid-template-areas:
+		'logo pull-right';
+}
+.header .logo {
+  color: #ffa800;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.header .logo .page {
+  color: #fff;
+}
+.header .login-toggle {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+}
+
+input[type=checkbox].login-toggle {
+	opacity: 0;
+}
+.login-menu {
+	position: relative;
+	width: 100px;
+	right: 100px;
+}
+.login-menu.false * {
+	display: none;
+}
+.login-menu.true * {
+	display: block;
+}
+@media only screen and (min-width: 768px) {
+}
